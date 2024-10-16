@@ -16,10 +16,19 @@
   <version>1.0</version>
   <develStage>alpha</develStage>
   <compatibility>
-    <ver>4.7</ver>
+    <ver>5.45</ver>
   </compatibility>
   <comments>Show timezones list while creating events</comments>
   <civix>
     <namespace>CRM/Eventtimezone</namespace>
+    <format>24.09.1</format>
   </civix>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <upgrader>CiviMix\Schema\Eventtimezone\AutomaticUpgrader</upgrader>
+  <mixins>
+    <mixin>entity-types-php@2.0.0</mixin>
+  </mixins>
 </extension>
